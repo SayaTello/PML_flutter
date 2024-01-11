@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tugas_flutter/bloc/categories/categories_bloc.dart';
 import 'package:tugas_flutter/bloc/login/login_bloc.dart';
 import 'package:tugas_flutter/bloc/logout/logout_bloc.dart';
+import 'package:tugas_flutter/bloc/products/products_bloc.dart';
 import 'package:tugas_flutter/data/datasources/auth_local_datasource.dart';
 import 'package:tugas_flutter/pages/auth/auth_page.dart';
 import 'package:tugas_flutter/pages/dashboard/dashboard_page.dart';
@@ -28,6 +30,12 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => LogoutBloc(),
+        ),
+        BlocProvider(
+          create: (context) => ProductsBloc(),
+        ),
+        BlocProvider(
+          create: (context) => CategoriesBloc(),
         ),
       ],child: MaterialApp(
           title: 'Flutter Demo',
