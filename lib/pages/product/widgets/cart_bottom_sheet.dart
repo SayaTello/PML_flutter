@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tugas_flutter/bloc/checkout/checkout_bloc.dart';
 import 'package:tugas_flutter/utils/price_ext.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
 import 'package:tugas_flutter/data/models/products_response_model.dart';
 

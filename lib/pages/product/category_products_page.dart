@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tugas_flutter/bloc/products/products_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-import 'package:tugas_flutter/data/models/products_response_model.dart';
 
 import '../../utils/color_resources.dart';
 import '../../utils/dimensions.dart';
