@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:tugas_flutter/data/models/products_response_model.dart';
+import 'package:tugas_flutter/pages/cart/cart_page.dart';
 
 import '../../../bloc/checkout/checkout_bloc.dart';
 import '../../../utils/color_resources.dart';
@@ -57,6 +58,8 @@ class _BottomCartViewState extends State<BottomCartView> {
                     onTap: () {
                       // Navigator.of(context).push(MaterialPageRoute(
                       //     builder: (context) => const CartPage()));
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const CartPage()));
                     },
                     child: Image.asset(Images.cartArrowDownImage,
                         color: ColorResources.getPrimary(context))),
@@ -74,6 +77,9 @@ class _BottomCartViewState extends State<BottomCartView> {
                     child: BlocBuilder<CheckoutBloc, CheckoutState>(
                       builder: (context, state) {
                         return state.map(
+                          loading: (value) {
+                            return CircularProgressIndicator();
+                          },
                           loaded: (value) {
                             int totalQty = 0;
                             value.products.forEach(
